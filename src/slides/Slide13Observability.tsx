@@ -1,8 +1,11 @@
 import { SlideFrame } from "../components/SlideFrame";
-import { Arrow, Chip } from "../components/Flow";
+import { Arrow, Panel, Chip } from "../components/Flow";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export function Slide13Observability() {
+  const [isArchitectureOpen, setIsArchitectureOpen] = useState(false);
+
   return (
     <SlideFrame
       index="13"
@@ -41,6 +44,42 @@ export function Slide13Observability() {
           rollout succeeded, and this phase adds visibility into how the platform behaves under real traffic.
         </p>
       </div>
+        <Panel className="mx-auto mb-4 w-full max-w-[900px]" title="Cloud Architecture" tone="cyan">
+          <div className="flex justify-center">
+            <button
+              type="button"
+              className="block w-full cursor-zoom-in rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan/70"
+              onClick={() => setIsArchitectureOpen(true)}
+              aria-label="Open cloud architecture image"
+            >
+              <img className="h-auto max-h-[55vh] w-full object-contain" src="/image.png" alt="Cloud Architecture" />
+            </button>
+          </div>
+        </Panel>
+
+        {isArchitectureOpen && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-ink/90 p-4 md:p-10"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Cloud Architecture"
+            onClick={() => setIsArchitectureOpen(false)}
+          >
+            <button
+              type="button"
+              className="absolute right-4 top-4 rounded-lg border border-line-2 bg-panel px-4 py-2 text-sm font-medium text-paper transition-colors hover:border-cyan/60 hover:text-cyan focus:outline-none focus:ring-2 focus:ring-cyan/70 md:right-8 md:top-8"
+              onClick={() => setIsArchitectureOpen(false)}
+            >
+              Close
+            </button>
+            <img
+              className="max-h-full max-w-full object-contain"
+              src="public/image.png"
+              alt="Cloud Architecture enlarged"
+              onClick={(event) => event.stopPropagation()}
+            />
+          </div>
+        )}
     </SlideFrame>
   );
 }
