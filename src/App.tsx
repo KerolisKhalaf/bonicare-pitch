@@ -10,7 +10,7 @@ import { Slide04WhyPlatform } from "./slides/Slide04WhyPlatform";
 import { Slide05AppToPlatform } from "./slides/Slide05AppToPlatform";
 import { Slide06WhatWeBuilt } from "./slides/Slide06WhatWeBuilt";
 import { Slide07AzureFoundation } from "./slides/Slide07AzureFoundation";
-import { Slide08DevOpsEnv } from "./slides/Slide08DevOpsEnv";
+//import { Slide08DevOpsEnv } from "./slides/Slide08DevOpsEnv";
 import { Slide09CiCd } from "./slides/Slide09CiCd";
 import { Slide10ComposeToAks } from "./slides/Slide10ComposeToAks";
 import { Slide11Kubernetes } from "./slides/Slide11Kubernetes";
