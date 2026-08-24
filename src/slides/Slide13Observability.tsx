@@ -5,6 +5,7 @@ import { useState } from "react";
 
 export function Slide13Observability() {
   const [isArchitectureOpen, setIsArchitectureOpen] = useState(false);
+  const architectureImage = `${import.meta.env.BASE_URL}public/image.png`;
 
   return (
     <SlideFrame
@@ -44,15 +45,15 @@ export function Slide13Observability() {
           rollout succeeded, and this phase adds visibility into how the platform behaves under real traffic.
         </p>
       </div>
-        <Panel className="mx-auto mb-4 w-full max-w-[900px]" title="Cloud Architecture" tone="cyan">
+        <Panel className="mx-auto mb-4 w-full max-w-[760px]" title="Cloud Architecture" tone="cyan">
           <div className="flex justify-center">
             <button
               type="button"
-              className="block w-full cursor-zoom-in rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan/70"
+              className="mx-auto block aspect-square w-full max-w-[680px] cursor-zoom-in rounded-lg bg-ink/40 p-3 focus:outline-none focus:ring-2 focus:ring-cyan/70 md:p-6"
               onClick={() => setIsArchitectureOpen(true)}
               aria-label="Open cloud architecture image"
             >
-              <img className="h-auto max-h-[55vh] w-full object-contain" src="/image.png" alt="Cloud Architecture" />
+              <img className="h-full w-full object-contain" src={architectureImage} alt="Cloud Architecture" />
             </button>
           </div>
         </Panel>
@@ -74,7 +75,7 @@ export function Slide13Observability() {
             </button>
             <img
               className="max-h-full max-w-full object-contain"
-              src="public/image.png"
+              src={architectureImage}
               alt="Cloud Architecture enlarged"
               onClick={(event) => event.stopPropagation()}
             />

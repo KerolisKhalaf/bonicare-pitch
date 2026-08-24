@@ -28,9 +28,10 @@ const slides = [
   Slide04WhyPlatform,
   Slide05AppToPlatform,
   Slide06WhatWeBuilt,
-  Slide07AzureFoundation,
-  Slide08DevOpsEnv,
   Slide09CiCd,
+  Slide07AzureFoundation,
+  // Slide08DevOpsEnv,
+  
   Slide10ComposeToAks,
   Slide11Kubernetes,
   Slide12Security,
