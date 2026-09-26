@@ -2,43 +2,42 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useDeck } from "./hooks/useDeck";
 import { DeckChrome } from "./components/DeckChrome";
 
-import { Slide01Cover } from "./slides/Slide01Cover";
-import { Slide02WhoWeAre } from "./slides/Slide02WhoWeAre";
-import { Slide02Challenge } from "./slides/Slide02Challenge";
-import { Slide03MeetBonicare } from "./slides/Slide03MeetBonicare";
-import { Slide04WhyPlatform } from "./slides/Slide04WhyPlatform";
-import { Slide05AppToPlatform } from "./slides/Slide05AppToPlatform";
-import { Slide06WhatWeBuilt } from "./slides/Slide06WhatWeBuilt";
-import { Slide07AzureFoundation } from "./slides/Slide07AzureFoundation";
-//import { Slide08DevOpsEnv } from "./slides/Slide08DevOpsEnv";
-import { Slide09CiCd } from "./slides/Slide09CiCd";
-import { Slide10ComposeToAks } from "./slides/Slide10ComposeToAks";
-import { Slide11Kubernetes } from "./slides/Slide11Kubernetes";
-import { Slide12Security } from "./slides/Slide12Security";
-import { Slide13Observability } from "./slides/Slide13Observability";
-import { Slide14Roadmap } from "./slides/Slide14Roadmap";
-import { Slide15WhyMatters } from "./slides/Slide15WhyMatters";
-import { Slide16Final } from "./slides/Slide16Final";
+import {
+  BusinessClose,
+  BusinessCover,
+  BusinessModel,
+  BusinessProblem,
+  BusinessValue,
+  Comparison,
+  CompetitiveLandscape,
+  Differentiators,
+  EgyptContext,
+  Features,
+  MarketGap,
+  Proof,
+  RoadmapBusiness,
+  Solution,
+  TeamIntroduction,
+  TechnicalCredibility,
+} from "./slides/BusinessDeck";
 
 const slides = [
-  Slide01Cover,
-  Slide02WhoWeAre,
-  Slide02Challenge,
-  Slide03MeetBonicare,
-  Slide04WhyPlatform,
-  Slide05AppToPlatform,
-  Slide06WhatWeBuilt,
-  Slide09CiCd,
-  Slide07AzureFoundation,
-  // Slide08DevOpsEnv,
-  
-  Slide10ComposeToAks,
-  Slide11Kubernetes,
-  Slide12Security,
-  Slide13Observability,
-  Slide14Roadmap,
-  Slide15WhyMatters,
-  Slide16Final,
+  BusinessCover,
+  TeamIntroduction,
+  BusinessProblem,
+  EgyptContext,
+  MarketGap,
+  Solution,
+  Features,
+  CompetitiveLandscape,
+  Comparison,
+  Differentiators,
+  BusinessValue,
+  BusinessModel,
+  Proof,
+  TechnicalCredibility,
+  RoadmapBusiness,
+  BusinessClose,
 ];
 
 const variants = {

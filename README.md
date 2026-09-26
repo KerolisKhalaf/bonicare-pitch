@@ -1,10 +1,10 @@
-# BoniCare — From Application to Automated Cloud Delivery
+# BoniCare — Connected Orthopedic Care
 
-Hackathon presentation website for **BoniCare**, built by **Deploy Or Die**.
+Business-focused product presentation for **BoniCare**, built by **Deploy Or Die**.
 
-A 16-slide interactive deck (React + TypeScript + Vite + Tailwind + Framer Motion) telling the story of
-BoniCare's platform engineering — from the product problem through Docker Compose, Azure, CI/CD, AKS,
-security, and observability.
+A 15-slide interactive deck (React + TypeScript + Vite + Tailwind + Framer Motion) that explains the
+customer problem, Egyptian market context, product workflow, feature-to-value story, competitive
+positioning, business hypotheses, proof of build, and the technical foundation behind BoniCare.
 
 ## Run locally
 
@@ -48,8 +48,7 @@ every push to `main`.
 
 ## Notes on content accuracy
 
-Slide content distinguishes between what's already implemented (containerized services, Docker Compose
-deployment, an initial Azure deployment, authored Kubernetes manifests, a working Jenkins-based CI
-pipeline) and what's targeted next (full AKS deployment, Key Vault + Managed Identity, Azure Monitor,
-autoscaling). Update `src/slides/*.tsx` as the underlying infrastructure work progresses — the "Current
-State → Target State" slide (`Slide14Roadmap.tsx`) is the fastest place to reflect new milestones.
+The business deck intentionally distinguishes verified product capabilities from hypotheses. The
+competitive slides use public positioning only and flag pricing, market size, adoption, regulatory,
+and feature-parity claims for current diligence. Update `src/slides/BusinessDeck.tsx` whenever pilot
+evidence, pricing, competitor research, or infrastructure milestones are verified.
