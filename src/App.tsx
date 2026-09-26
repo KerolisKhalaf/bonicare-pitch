@@ -19,6 +19,9 @@ import {
   Solution,
   TeamIntroduction,
   TechnicalCredibility,
+  ArchitecturePhaseOne,
+  ArchitecturePhaseTwo,
+  ArchitecturePhaseThree,
 } from "./slides/BusinessDeck";
 
 const slides = [
@@ -36,6 +39,9 @@ const slides = [
   BusinessModel,
   Proof,
   TechnicalCredibility,
+  ArchitecturePhaseOne,
+  ArchitecturePhaseTwo,
+  ArchitecturePhaseThree,
   RoadmapBusiness,
   BusinessClose,
 ];

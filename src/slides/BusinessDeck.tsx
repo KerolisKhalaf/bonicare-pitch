@@ -141,6 +141,83 @@ export function TechnicalCredibility() {
   return <SlideFrame index="13" kicker="Technical credibility" title={<>The architecture supports reliability without becoming the pitch.</>} subtitle="Only the technical facts that support business confidence: the platform is containerized, cloud-hosted, observable, and designed to onboard more clinics."><div className="grid grid-cols-1 gap-3 md:grid-cols-4"><Panel title="Scalability" tone="azure"><div className="text-[12.5px] leading-relaxed text-mist">Azure-hosted, containerized services create a path to repeatable clinic onboarding.</div></Panel><Panel title="Security" tone="cyan"><div className="text-[12.5px] leading-relaxed text-mist">Network boundary, authentication, secure payments, and protected record handling are part of the platform foundation.</div></Panel><Panel title="Reliability" tone="green"><div className="text-[12.5px] leading-relaxed text-mist">Dedicated services for API, video, AI, data, and file storage isolate key responsibilities.</div></Panel><Panel title="Operations" tone="mist"><div className="text-[12.5px] leading-relaxed text-mist">CI/CD and Azure monitoring foundations support repeatable releases and visibility.</div></Panel></div><div className="mt-6 flex flex-wrap items-center gap-2"><Chip tone="cyan">Application</Chip><Arrow /><Chip tone="azure">Containers</Chip><Arrow /><Chip tone="cyan">Azure</Chip><Arrow /><Chip tone="green">Repeatable operations</Chip></div></SlideFrame>;
 }
 
+function ArchitecturePhaseSlide({
+  index,
+  phase,
+  title,
+  subtitle,
+  image,
+}: {
+  index: string;
+  phase: string;
+  title: string;
+  subtitle: string;
+  image: string;
+}) {
+  return (
+    <SlideFrame index={index} kicker={`Architecture · ${phase}`} title={title} subtitle={subtitle} width="full">
+      <div className="flex h-full items-center justify-center">
+        <motion.div
+          initial={{ opacity: 0, y: 14, scale: 0.98 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.6, ease }}
+          className="flex h-full w-full items-center justify-center rounded-2xl border border-line-2 bg-panel/70 p-3 shadow-2xl md:p-5"
+        >
+          <a
+            href={`${import.meta.env.BASE_URL}${image}`}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`Open ${phase} architecture diagram at full size`}
+            className="block max-h-full max-w-full cursor-zoom-in rounded-xl focus-visible:outline-2 focus-visible:outline-cyan"
+          >
+            <img
+              src={`${import.meta.env.BASE_URL}${image}`}
+              alt={`${phase} architecture diagram`}
+              className="max-h-full max-w-full rounded-xl object-contain transition-opacity hover:opacity-85"
+            />
+          </a>
+        </motion.div>
+      </div>
+    </SlideFrame>
+  );
+}
+
+export function ArchitecturePhaseOne() {
+  return (
+    <ArchitecturePhaseSlide
+      index="14"
+      phase="Phase 1"
+      title="Start with a working product foundation."
+      subtitle="The first architecture phase establishes the core application services and the connected workflow BoniCare depends on."
+      image="phase-1.jpeg"
+    />
+  );
+}
+
+export function ArchitecturePhaseTwo() {
+  return (
+    <ArchitecturePhaseSlide
+      index="15"
+      phase="Phase 2"
+      title="Connect the platform for dependable delivery."
+      subtitle="The second phase adds the surrounding platform capabilities needed to move from a working application toward repeatable operation."
+      image="phase-2.jpeg"
+    />
+  );
+}
+
+export function ArchitecturePhaseThree() {
+  return (
+    <ArchitecturePhaseSlide
+      index="16"
+      phase="Phase 3"
+      title="Build toward a scalable care platform."
+      subtitle="The final phase shows the path from the product foundation to a more scalable, observable, and clinic-ready platform."
+      image="phase-3.jpeg"
+    />
+  );
+}
+
 export function RoadmapBusiness() {
   return <SlideFrame index="14" kicker="Roadmap" title={<>Prove the wedge, then widen the platform.</>} subtitle="Each step is tied to a product or business question—not just an infrastructure milestone." width="full"><div className="grid grid-cols-1 gap-3 md:grid-cols-3">{[
     ["1 · Validate", "Run a focused clinic/patient pilot; measure usability, safety, and workflow outcomes.", "Now"],
